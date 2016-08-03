@@ -23,6 +23,11 @@ $("#pickList").pickList(); // JS
 ```
 <p>To set data into the plugin just include:</p>
 ```javascript
+var valSelected = {
+  01: {id: 16,text: 'Alex'},
+  02: {id: 17,text: 'Rose'},
+  03: {id: 18,text: 'Lily'},
+  04: {id: 19,text: 'Ha'}};
 var val = {
     01: {id: 01, text: 'Isis'},
     02: {id: 02, text: 'Sophia'},
@@ -32,11 +37,13 @@ var val = {
     06: {id: 06, text: 'Laura'}
   };
 
-var pick = $("#pickList").pickList({data: val});
+var pick = $('#pickList').pickList({
+                data: values,
+                dataSelected: values1
+            });
 ```
 <p>To get data just call the getValues:</p>
 ```javascript
- var pick = $("#pickList").pickList({data: val});
 
  $("#getSelected").click(function () {
      console.log(pick.getValues());
@@ -44,8 +51,8 @@ var pick = $("#pickList").pickList({data: val});
 ```
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="mini-icon mini-icon-link"></span></a>Demo</h2>
-<p><strong><a href="https://jsfiddle.net/gabrielr47/8ek53b1f/">pickList Jsfiddle Show + Code</a></strong> </p>
-<p><strong><a href="https://jsfiddle.net/gabrielr47/8ek53b1f/show">pickList Jsfiddle Show</a></strong> </p>
+<p><strong><a href="https://jsfiddle.net/Alexrgs/f5vuczb2/">pickList Jsfiddle Show + Code</a></strong> </p>
+<p><strong><a href="https://jsfiddle.net/Alexrgs/f5vuczb2/show/">pickList Jsfiddle Show</a></strong> </p>
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="mini-icon mini-icon-link"></span></a>Author</h2>
 
